@@ -1,8 +1,7 @@
 
 ########### ADDED CHANGES ####################################################################################
 
-export PATH=$PATH:/root/wso2-iass-setup/java/jdk1.8.0_131/bin
-export JAVA_HOME=/root/wso2-iass-setup/java/jdk1.8.0_131
+export JAVA_HOME=$JDK_HOME
 
 alias bb='nohup mvn clean install > build-logs.txt 2>&1 </dev/null &'
 alias bbnt='nohup mvn clean install -Dmaven.test.skip=true > build-logs.txt 2>&1 </dev/null &'
