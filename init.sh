@@ -1,11 +1,15 @@
 #!/bin/bash
 
+WUM_VERSION=3.0.6
 USER_DIR=$(pwd)
 
 git clone https://github.com/malinthaprasan/wso2-iass-setup
 cd wso2-iass-setup
 
 #install java
+echo "-------------------"
+echo "Installing JAVA ..."
+echo "-------------------"
 cd java
 cat jdk-8u* > jdk-linux-x64.tar.gz
 tar -xf jdk-linux-x64.tar.gz
@@ -33,7 +37,21 @@ sudo mv profile-cat /etc/profile
 # sudo apt install maven
 
 # install unzip
+echo "-------------------"
+echo "Installing unzip .."
+echo "-------------------"
 sudo apt install unzip
+
+# install wum
+echo "-------------------"
+echo "Installing WUM ...."
+echo "-------------------"
+wget http://product-dist.wso2.com/downloads/wum/$WUM_VERSION/wum-$WUM_VERSION-linux-x64.tar.gz
+tar -xvf wum-$WUM_VERSION-linux-x64.tar.gz
+WUM_HOME=$USER_DIR/wum
+sudo update-alternatives --install "/usr/bin/wum" "wum" "$WUM_HOME/bin/wum" 1
+
+
 
 # install nvm and node
 # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
