@@ -46,6 +46,7 @@ sudo apt install unzip
 echo "-------------------"
 echo "Installing WUM ...."
 echo "-------------------"
+cd $USER_DIR
 wget http://product-dist.wso2.com/downloads/wum/$WUM_VERSION/wum-$WUM_VERSION-linux-x64.tar.gz
 tar -xvf wum-$WUM_VERSION-linux-x64.tar.gz
 WUM_HOME=$USER_DIR/wum
