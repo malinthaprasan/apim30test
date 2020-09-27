@@ -6,7 +6,7 @@ then
 fi
 
 FILE=$(basename $1)
-nohup prism mock $*  > $FILE.log 2>&1 </dev/null &
+nohup prism mock $* -h 0.0.0.0  > $FILE.log 2>&1 </dev/null &
 PID=$(echo $!)
 echo PID=$PID
 echo "kill -9 $PID; rm $FILE.stop; rm $FILE.log" > $FILE.stop
