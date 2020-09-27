@@ -51,6 +51,11 @@ tar -xvf wum-$WUM_VERSION-linux-x64.tar.gz
 WUM_HOME=$USER_DIR/wum
 sudo update-alternatives --install "/usr/bin/wum" "wum" "$WUM_HOME/bin/wum" 1
 
+# install prism
+echo "-------------------"
+echo "Installing prism : swagger/oas mock server ...."
+echo "-------------------"
+npm install -g @stoplight/prism-cli@4.1.0
 
 
 # install nvm and node

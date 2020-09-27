@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ -z "$1" ]
+then
+    echo "usage: start /path/to/swagger [-p <port>]"
+    exit
+fi
+
+FILE=$(basename $1)
+nohup prism mock $*  > $FILE.log 2>&1 </dev/null &
+PID=$(echo $!)
+echo PID=$PID
+echo "kill -9 $PID; rm $FILE.stop; rm $FILE.log" > $FILE.stop
+chmod 755 $FILE.stop
+timeout 3 tail -f $FILE.log
