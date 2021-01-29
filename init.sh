@@ -32,6 +32,12 @@ echo "============="
 
 sudo mv profile-cat /etc/profile
 
+# install unzip
+echo "-------------------"
+echo "Installing unzip .."
+echo "-------------------"
+sudo apt install unzip
+
 # install maven
 echo "-------------------"
 echo "Installing MAVEN ..."
@@ -42,11 +48,6 @@ export MVN_HOME=$USER_DIR/wso2-iass-setup/maven/apache-maven-3.6.2
 sudo update-alternatives --install "/usr/bin/mvn" "mvn" "$MVN_HOME/bin/mvn" 1
 cd -
 
-# install unzip
-echo "-------------------"
-echo "Installing unzip .."
-echo "-------------------"
-sudo apt install unzip
 
 # install wum
 echo "-------------------"
