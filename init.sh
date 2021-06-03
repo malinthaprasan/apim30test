@@ -3,6 +3,15 @@
 WUM_VERSION=3.0.6
 USER_DIR=$(pwd)
 
+
+sudo apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        libxml2-utils \
+        netcat \
+        unzip \
+        wget \
+        git
+
 git clone https://github.com/malinthaprasan/wso2-iass-setup
 cd wso2-iass-setup
 
