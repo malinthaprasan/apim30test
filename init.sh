@@ -84,4 +84,4 @@ nvm install 12.16.3
 echo "-----------------------------------------------"
 echo "Installing prism : swagger/oas mock server ...."
 echo "-----------------------------------------------"
-npm install -g @stoplight/prism-cli@4.1.0
+npm install -g @stoplight/prism-cli
