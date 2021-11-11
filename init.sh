@@ -85,3 +85,11 @@ echo "-----------------------------------------------"
 echo "Installing prism : swagger/oas mock server ...."
 echo "-----------------------------------------------"
 npm install -g @stoplight/prism-cli
+
+
+
+echo "-----------------------------------------------"
+echo "Installing docker                          ...."
+echo "-----------------------------------------------"
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
